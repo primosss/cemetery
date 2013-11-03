@@ -1,0 +1,45 @@
+#game {
+	position: absolute;
+	background-color: gray;
+	border-radius: 20px;
+}
+
+.ui-body-black {
+	background-image: url('../image/font.png');
+	background-size: 100%;
+	color: white;
+}
+
+.ui-body-tranparent {
+	background: transparent;
+}
+
+.grids a {
+	background: black;
+	color: white;
+	float: left;
+	height: 100%;
+	text-decoration: none;
+	width: 100%;
+}
+
+#openOpcion {
+	background: black;
+	float: right;
+	height: 60px;
+	position: relative;
+	width: 60px;
+	z-index: 1;
+}
+
+#openOpcion a {
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+#texto {
+	font-size: 8em;
+	position: absolute;
+	z-index: 2;
+}
