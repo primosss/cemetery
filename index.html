@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html charset="utf-8">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/canvasAdd.js"></script>
+	<script type="text/javascript" src="js/position.js"></script>
 
 	<!-- importar Jquery -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
-
-
 	<script>
 		$( window ).resize(function() {
-			$(".grids").height("5px");
-		  var pagAlto = document.body.scrollHeight;
-		  pagAlto = (pagAlto-40)/4;
-		  $(".grids").height(pagAlto+"px");
-
-		  $("#game").width("10px");
-		  $("#game").height("10px");
-		  canvasAncho = document.body.scrollWidth-37;
-		  canvasAlto = document.body.scrollHeight-35;
-		  $("#game").width(canvasAncho+"px");
-		  $("#game").height(canvasAlto+"px");
-
-		  redimensionar();
+			redimensionar();
 		});
 
 		$("#inicio").ready(function() {
+			redimensionar();
+		});
+
+		function redimensionar() {
+			$(window).orientation="landscape";
+
 			$(".grids").height("5px");
 		  var pagAlto = document.body.scrollHeight;
 		  pagAlto = (pagAlto-40)/4;
 		  $(".grids").height(pagAlto+"px");
-
-		  canvasAncho = document.body.scrollWidth-37;
-		  canvasAlto = document.body.scrollHeight-35;
-		  $("#game").width(canvasAncho+"px");
-		  $("#game").height(canvasAlto+"px");
-		});
-
+		}
 	</script>
 
 </head>
@@ -97,7 +85,7 @@
 		<section data-role="content">
 			<h1 id="texto"></h1>
 			<div id="openOpcion"><a href="#opcion"></a></div>
-			<canvas id="game" width="700" height="300"></canvas>
+			<canvas id="game" width="1200" height="600"></canvas>
 		</section>
 
 	</section>
@@ -111,8 +99,8 @@
 			iniciar();
 		});
 
-		$("#game").click( function() {
-			clickObjeto();
+		$("#game").click( function(e) {
+			clickObjeto(e.clientX, e.clientY);
 		});
 
 		$(".iniciarGame").click( function() {
