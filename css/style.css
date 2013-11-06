@@ -26,9 +26,9 @@
 #openOpcion {
 	background: black;
 	float: right;
-	height: 60px;
+	height: 130px;
 	position: relative;
-	width: 60px;
+	width: 130px;
 	z-index: 1;
 }
 
