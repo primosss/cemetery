@@ -22,12 +22,11 @@
 		});
 
 		function redimensionar() {
+		  windowAncho= $(window).width();
+		  windowAlto= $(window).height();
+			
 			$(window).orientation="landscape";
-
-			$(".grids").height("5px");
-		  var pagAlto = document.body.scrollHeight;
-		  pagAlto = (pagAlto-40)/4;
-		  $(".grids").height(pagAlto+"px");
+		  $(".grids").height((windowAlto/4)+"px");
 		}
 	</script>
 
@@ -37,33 +36,33 @@
 	<section data-role="page" id="inicio" data-theme="black">
 
 		<section data-role="content">
+			<div class="tam">
+				<div class="ui-grid-d" style="text-align:center">
+			    <div class="ui-block-a"><div class="grids"></div></div>
+			    <div class="ui-block-b"><div class="grids"></div></div>
+			    <div class="ui-block-c"><div class="grids"></div></div>
+			    <div class="ui-block-d"><div class="grids"></div></div>
+			    <div class="ui-block-e"><div class="grids"></div></div>
 
-			<div class="ui-grid-d" style="text-align:center">
-		    <div class="ui-block-a"><div class="grids"></div></div>
-		    <div class="ui-block-b"><div class="grids"></div></div>
-		    <div class="ui-block-c"><div class="grids"></div></div>
-		    <div class="ui-block-d"><div class="grids"></div></div>
-		    <div class="ui-block-e"><div class="grids"></div></div>
+			    <div class="ui-block-a"><div class="grids">POSICION</div></div>
+			    <div class="ui-block-b"><div class="grids"></div></div>
+			    <div class="ui-block-c"><div class="grids"></div></div>
+			    <div class="ui-block-d"><div class="grids"></div></div>
+			    <div class="ui-block-e"><div class="grids"></div></div>
 
-		    <div class="ui-block-a"><div class="grids">POSICION</div></div>
-		    <div class="ui-block-b"><div class="grids"></div></div>
-		    <div class="ui-block-c"><div class="grids"></div></div>
-		    <div class="ui-block-d"><div class="grids"></div></div>
-		    <div class="ui-block-e"><div class="grids"></div></div>
+			    <div class="ui-block-a"><div class="grids"></div></div>
+			    <div class="ui-block-b"><div class="grids"></div></div>
+			    <div class="ui-block-c"><div class="grids"><a href="#jugar" data-transition="slide" class="iniciarGame">JUGAR</a></div></div>
+			    <div class="ui-block-d"><div class="grids"></div></div>
+			    <div class="ui-block-e"><div class="grids"></div></div>
 
-		    <div class="ui-block-a"><div class="grids"></div></div>
-		    <div class="ui-block-b"><div class="grids"></div></div>
-		    <div class="ui-block-c"><div class="grids"><a href="#jugar" data-transition="slide" class="iniciarGame">JUGAR</a></div></div>
-		    <div class="ui-block-d"><div class="grids"></div></div>
-		    <div class="ui-block-e"><div class="grids"></div></div>
-
-		    <div class="ui-block-a"><div class="grids"></div></div>
-		    <div class="ui-block-b"><div class="grids"></div></div>
-		    <div class="ui-block-c"><div class="grids"><a href="#jugar" data-transition="slide" class="iniciarGame"></a></div></div>
-		    <div class="ui-block-d"><div class="grids"></div></div>
-		    <div class="ui-block-e"><div class="grids"><a href="#intro" data-transition="slide" >INTRO</a></div></div>
+			    <div class="ui-block-a"><div class="grids"></div></div>
+			    <div class="ui-block-b"><div class="grids"></div></div>
+			    <div class="ui-block-c"><div class="grids"><a href="#jugar" data-transition="slide" class="iniciarGame"></a></div></div>
+			    <div class="ui-block-d"><div class="grids"></div></div>
+			    <div class="ui-block-e"><div class="grids"><a href="#intro" data-transition="slide" >INTRO</a></div></div>
+				</div>
 			</div>
-
 		</section>
 
 	</section>
@@ -83,9 +82,10 @@
 		</div>
 		
 		<section data-role="content">
+			<div class="tam"> <canvas id="game" width="2200" height="1600"></canvas> </div>
 			<h1 id="texto"></h1>
 			<div id="openOpcion"><a href="#opcion"></a></div>
-			<canvas id="game" width="1200" height="600"></canvas>
+			
 		</section>
 
 	</section>
